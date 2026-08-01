@@ -413,7 +413,7 @@ function loadLeaderboard(){
                 <td>${score.player}</td>
                 <td>${score.variant}</td>
                 <td>${score.moves}</td>
-                <td>${formatTime(score.time)}</td>
+                <td>${formatTime(score.solve_time)}</td>
             </tr>`;
         });
     });
