@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Puzzle!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <a href="#howToPlay" class="nav-btn">
+        How to Play
+    </a>
+
+    <a href="leaderboard.html" class="leaderboard-btn">
+        Leaderboard
+    </a>
+
+    <a href="#info" class="nav-btn">
+        Info
+    </a>
+</header>
+
+<section class="hero">
+    <h1>15 Puzzle!</h1>
+
+    <p class="subtitle">
+        Rearrange the image by sliding tiles into the correct order.
+        Test your speed, strategy, and puzzle-solving skills!
+    </p>
+</section>
+
+<section class="mode-selection">
+
+    <button class="mode-btn active" data-mode="easy">
+        Easy
+    </button>
+
+    <button class="mode-btn" data-mode="regular">
+        Regular
+    </button>
+
+    <button class="mode-btn" data-mode="hard">
+        Hard
+    </button>
+
+</section>
+
+<main class="game-container">
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <h3>Time</h3>
+            <p id="timer">
+                00:00
+            </p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Moves</h3>
+            <p id="moves">
+                0
+            </p>
+        </div>
+
+    </section>
+
+    <section class="board-wrapper">
+
+        <div id="puzzleBoard">
+
+        </div>
+
+    </section>
+
+    <section class="controls">
+
+        <button id="shuffleBtn">
+            Shuffle
+        </button>
+
+        <button id="resetBtn">
+            Reset
+        </button>
+
+        <button id="pauseBtn">
+            Pause Timer
+        </button>
+
+        <button id="hintBtn">
+            Hint
+        </button>
+
+    </section>
+
+</main>
+
+
+<section id="howToPlay" class="info-section">
+
+    <div class="info-card">
+
+        <h2>
+            How to Play
+        </h2>
+
+        <ol>
+
+            <li>
+                Choose a difficulty mode.
+            </li>
+
+            <li>
+                Press <strong>Shuffle</strong> to begin.
+            </li>
+
+            <li>
+                Click tiles next to the empty space to slide them.
+            </li>
+
+            <li>
+                Rearrange the tiles until the image is complete.
+            </li>
+
+            <li>
+                Complete the puzzle using the fewest moves and fastest time possible.
+            </li>
+
+        </ol>
+
+        <h3>
+            Difficulty Modes
+        </h3>
+
+        <ul>
+
+            <li>
+                <strong>Easy:</strong> Includes hints and shows correctly placed tiles.
+            </li>
+
+            <li>
+                <strong>Regular:</strong> Includes limited hints but no tile position feedback.
+            </li>
+
+            <li>
+                <strong>Hard:</strong> No hints or placement assistance.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<section id="info" class="info-section">
+
+    <div class="info-card">
+
+        <h2>
+            About the 15 Puzzle
+        </h2>
+
+        <p>
+            The 15 Puzzle is a classic sliding puzzle invented in the late
+            1800s. It consists of fifteen numbered or image tiles arranged
+            in a 4×4 grid with one empty space.
+        </p>
+
+        <p>
+            Players must slide tiles around the board until the original
+            arrangement is restored. The puzzle became one of the most
+            popular mechanical puzzles of its era.
+        </p>
+
+        <h3>
+            Fun Facts
+        </h3>
+
+        <ul>
+
+            <li>
+                Not every possible arrangement can be solved.
+            </li>
+
+            <li>
+                A valid shuffle must preserve the puzzle's mathematical rules.
+            </li>
+
+            <li>
+                The number of possible board arrangements is greater than
+                20 trillion.
+            </li>
+
+            <li>
+                Strategy and planning are often more important than speed.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<div id="winModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2>
+            Congratulations!
+        </h2>
+
+        <p>
+            You solved the puzzle.
+        </p>
+
+        <p>
+            Time:
+            <span id="finalTime">
+                00:00
+            </span>
+        </p>
+
+        <p>
+            Moves:
+            <span id="finalMoves">
+                0
+            </span>
+        </p>
+
+        <button id="playAgainBtn">
+            Play Again
+        </button>
+
+        <a href="leaderboard.html">
+            View Leaderboard
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        15 Puzzle Project
+    </p>
+
+</footer>
+
+
+<script src="logic.js"></script>
+
+</body>
+</html>

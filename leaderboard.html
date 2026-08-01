@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>15 Puzzle Leaderboard</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="top-bar">
+            <a href="index.html" class="leaderboard-btn">Back to Game</a>
+            <h1>Leaderboard</h1>
+            <div></div>
+        </header>
+        <main class="leaderboard-container">
+            <section class="hero">
+                <h2>Top Scores</h2>
+                <p>View the fastest solve times and lowest move counts across
+                    all puzzle modes.</p>
+            </section>
+            <section class="leaderboard-table-wrapper">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Mode</th>
+                            <th>Moves</th>
+                            <th>Solve Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardData">
+                        <tr>
+                            <td>1</td>
+                            <td>Player</td>
+                            <td>Easy</td>
+                            <td>35</td>
+                            <td>01:24</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Player</td>
+                            <td>Regular</td>
+                            <td>48</td>
+                            <td>02:10</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Player</td>
+                            <td>Hard</td>
+                            <td>72</td>
+                            <td>04:35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>15 Puzzle Leaderboard</p>
+        </footer>
+        <script src="logic.js"></script>
+    </body>
+</html>
