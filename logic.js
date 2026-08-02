@@ -95,17 +95,6 @@ document.addEventListener("keydown",(event)=>{
 });
 
 
-//!-------------TESTING----------------!
-// Remove before deployment.
-document.addEventListener("keydown",(e)=>{
-    if(e.key==="w"){
-        finishGame();
-    }
-});
-
-
-
-
 
 function initializeGame(){
     currentMode="easy";
@@ -400,12 +389,13 @@ function saveScore(){
 
 
 function loadLeaderboard(){
+    //sends request
     fetch("api.php?action=leaderboard")
     .then(response=>response.json())
     .then(scores=>{
         let table=document.getElementById("leaderboardData");
         table.innerHTML="";
-
+        //new table row
         scores.forEach((score,index)=>{
             table.innerHTML+=`
             <tr>
